@@ -26,6 +26,7 @@ const {fork} = require("child_process");
  */
 
 const main = async function () {
+    process.chdir(process.cwd());
     const dirLs = await fs.promises.readdir(process.cwd());
     const tests = dirLs.filter(entry => entry.startsWith("test")
                                && entry.endsWith(".js")
@@ -36,6 +37,7 @@ const main = async function () {
             const modulePath = path.join(process.cwd(), testFileName);
 
             console.log(`\n**** ${testFileName} starting ****\n`);
+            console.log("modulePath", modulePath);
 
             const moduleResult = await new Promise((resolve, reject) => {
                 const proc = fork(modulePath)
