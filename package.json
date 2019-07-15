@@ -1,6 +1,6 @@
 {
-  "name": "nics-test-runner",
-  "version": "0.0.2",
+  "name": "@nicferrier/test-runner",
+  "version": "0.0.3",
   "description": "A really simple test runner.",
   "main": "index.js",
   "bin": {
@@ -11,5 +11,6 @@
   },
   "keywords": [],
   "author": "Nic Ferrier, <nic@ferrier.me.uk>",
+  "repository": "nicferrier/nics-node-test-runner",
   "license": "ISC"
 }
